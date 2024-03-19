@@ -1,0 +1,47 @@
+POST 127.0.0.1:8000/good/create/?projectId=1
+Content-Type: application/json
+
+
+{
+  "name": "test record 1"
+}
+
+####
+
+PATCH 127.0.0.1:8000/good/update/?id=11&projectId=1
+Content-Type: application/json
+
+
+{
+  "name": "test record 2",
+  "description": "some text"
+}
+
+####
+
+DELETE localhost:8000/good/remove/?id=6&projectId=1
+Content-Type: application/json
+
+{}
+
+####
+
+GET localhost:8000/goods/list/?limit=5&offset=21
+Content-Type: application/json
+
+####
+
+GET localhost:8000/goods/list/
+Content-Type: application/json
+
+####
+
+PATCH 127.0.0.1:8000/good/reprioritize/?id=6&projectId=1
+Content-Type: application/json
+
+
+{
+  "newPriority": 2
+}
+
+####
